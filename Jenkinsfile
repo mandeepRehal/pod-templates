@@ -23,8 +23,8 @@ pipeline {
     stage('Test-windows') {
       agent {
         kubernetes {
-          label 'windows'
-          yamlFile 'win/win-pod.yaml'
+          label 'windows-test'
+//          yamlFile 'win/win-pod.yaml'
         }
       }
       steps {
