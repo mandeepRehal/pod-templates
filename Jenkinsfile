@@ -17,6 +17,9 @@ pipeline {
         container('nodejs') {
           echo 'Hello World!'   
           sh 'node --version'
+	timeout(time: 2, unit: “HOURS”) {
+    	input message: ‘Continue?’, ok: ‘Yes’
+	}
         }
       }
     }
@@ -30,6 +33,9 @@ pipeline {
       }
       steps {
         bat 'dir'
+        timeout(time: 2, unit: “HOURS”) {
+        input message: ‘Continue?’, ok: ‘Yes’
+        }
       }
     }
   }
