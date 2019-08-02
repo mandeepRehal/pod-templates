@@ -29,7 +29,7 @@ pipeline {
         }
       }
       steps {
-        container('jnlp){
+        container('jnlp'){
         bat 'dir'
         }
       }
