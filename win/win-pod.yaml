@@ -1,0 +1,12 @@
+kind: Pod
+metadata:
+  name: windows
+spec:
+  containers:
+  - name: jnlp
+    image: jenkins4eval/jnlp-agent:latest-windows
+    command:
+    - cat
+    tty: true
+  nodeSelector:
+    agentpool: winage

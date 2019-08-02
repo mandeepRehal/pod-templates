@@ -5,7 +5,7 @@ pipeline {
     skipDefaultCheckout true
   }
   stages {
-    stage('Test') {
+    stage('Test-node') {
       agent {
         kubernetes {
           label 'nodejs-app-pod'
@@ -18,6 +18,18 @@ pipeline {
           echo 'Hello World!'   
           sh 'node --version'
         }
+      }
+    }
+    stage('Test-windows') {
+      agent {
+        kubernetes {
+          label 'windows'
+          yamlFile 'win/win-pod.yaml'
+        }
+      }
+      steps {
+        checkout scm
+        bat 'dir'
       }
     }
   }
