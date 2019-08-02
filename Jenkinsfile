@@ -28,7 +28,6 @@ pipeline {
         }
       }
       steps {
-        checkout scm
         bat 'dir'
       }
     }
