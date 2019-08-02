@@ -1,0 +1,10 @@
+kind: Pod
+metadata:
+  name: nodejs-app
+spec:
+  containers:
+  - name: nodejs
+    image: node:slim
+    command:
+    - cat
+    tty: true
