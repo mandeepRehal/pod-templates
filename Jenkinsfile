@@ -23,15 +23,13 @@ pipeline {
     stage('Test-windows') {
       agent {
         kubernetes {
-//          label 'windows-test'
-	    label 'windows-jenkinsfile'
-            yamlFile 'win/win-pod.yaml'
+            label 'windows-test'
+//	    label 'windows-jenkinsfile'
+//            yamlFile 'win/win-pod.yaml'
         }
       }
       steps {
-        container('jnlp'){
         bat 'dir'
-        }
       }
     }
   }
