@@ -8,3 +8,5 @@ spec:
     command:
     - cat
     tty: true
+  nodeSelector:
+    agentpool: linage
