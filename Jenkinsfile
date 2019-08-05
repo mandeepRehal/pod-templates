@@ -25,7 +25,7 @@ pipeline {
       agent {
         kubernetes {
 //        label 'windows-test'
-//	  label 'windows-jenkinsfile'
+	  label 'windows-jenkinsfile'
           yamlFile 'win/win-pod.yaml'
         }
       }
