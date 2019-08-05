@@ -34,7 +34,7 @@ pipeline {
         //bat 'dir'
         //sleep 30
        container('windows-sdk'){
-        bat 'dotnet'
+        bat 'dir'
        } 
      }
     }
