@@ -24,19 +24,19 @@ pipeline {
     stage('Test-windows') {
       agent {
         kubernetes {
-            label 'windows-test'
-//	    label 'windows-jenkinsfile'
-//          yamlFile 'win/win-pod.yaml'
+//        label 'windows-test'
+//	  label 'windows-jenkinsfile'
+          yamlFile 'win/win-pod.yaml'
         }
       }
       steps {
        // checkout scm
-        //bat 'dir'
-        //sleep 30
-       container('windows-sdk'){
-        echo 'Hello'
-        bat 'dotnet'
-       } 
+        bat 'dir'
+        sleep 60
+       //container('windows-sdk'){
+       // echo 'Hello'
+        //bat 'dotnet'
+       //} 
      }
     }
   }
