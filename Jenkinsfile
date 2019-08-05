@@ -34,6 +34,7 @@ pipeline {
         //bat 'dir'
         //sleep 30
        container('windows-sdk'){
+        echo 'Hello'
         bat 'dir'
        } 
      }
