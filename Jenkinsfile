@@ -30,8 +30,12 @@ pipeline {
         }
       }
       steps {
-        bat 'dir'
-        sleep 30 
+        checkout scm
+        //bat 'dir'
+        //sleep 30
+       container('windows-sdk'){
+        bat 'dotnet'
+       } 
      }
     }
   }
