@@ -30,7 +30,7 @@ pipeline {
         }
       }
       steps {
-        checkout scm
+       // checkout scm
         //bat 'dir'
         //sleep 30
        container('windows-sdk'){
