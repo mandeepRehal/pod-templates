@@ -31,8 +31,8 @@ pipeline {
       }
       steps {
         bat 'dir'
-       container(name:'windows-sdk'){
-        bat 'dotnet -h'
+//       container(name:'windows-sdk'){
+//        bat 'dotnet -h'
        } 
      }
     }
