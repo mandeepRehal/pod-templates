@@ -17,7 +17,7 @@ pipeline {
         container('nodejs') {
           echo 'Hello World!'   
           sh 'node --version'
-          sleep 30
+//        sleep 30
         }
       }
     }
@@ -35,7 +35,7 @@ pipeline {
         sleep 60
        //container('windows-sdk'){
        // echo 'Hello'
-        //bat 'dotnet'
+       //bat 'dotnet'
        //} 
      }
     }
