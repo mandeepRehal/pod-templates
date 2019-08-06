@@ -33,10 +33,9 @@ pipeline {
        // checkout scm
         bat 'dir'
         sleep 60
-       //container('windows-sdk'){
-       // echo 'Hello'
-       //bat 'dotnet'
-       //} 
+       container(name:'windows-sdk', shell:'cmd.exe'){
+        bat 'dotnet'
+       } 
      }
     }
   }
