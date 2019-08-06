@@ -32,7 +32,7 @@ pipeline {
       steps {
         bat 'dir'
        container(name:'windows-sdk'){
-        bat 'dotnet'
+        bat 'dotnet -h'
        } 
      }
     }
