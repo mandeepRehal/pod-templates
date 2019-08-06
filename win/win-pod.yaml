@@ -6,8 +6,10 @@ spec:
   - name: jnlp
     image: jenkins4eval/jnlp-agent:latest-windows
     tty: true
+    workingDir: C:\jenkins\home
   - name: windows-sdk
     image: mcr.microsoft.com/dotnet/core/sdk:2.2.401-nanoserver-1809
     tty: true
+    workingDir: C:\jenkins\home
   nodeSelector:
     agentpool: winage
