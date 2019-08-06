@@ -33,7 +33,7 @@ pipeline {
         bat 'dir'
 //       container(name:'windows-sdk'){
 //        bat 'dotnet -h'
-       } 
+//       } 
      }
     }
   }
