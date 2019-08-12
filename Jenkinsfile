@@ -30,6 +30,7 @@ pipeline {
         }
       }
       steps {
+	sleep 30
         bat 'dir'
 //       container(name:'windows-sdk'){
 //        bat 'dotnet -h'
