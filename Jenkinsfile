@@ -17,7 +17,7 @@ pipeline {
         container('nodejs') {
           echo 'Hello World!'   
           sh 'node --version'
-//        sleep 30
+          sleep 30
         }
       }
     }
