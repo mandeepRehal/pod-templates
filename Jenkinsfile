@@ -33,9 +33,9 @@ pipeline {
       steps {
 	sleep 45
         bat 'dir'
-//       container(name:'windows-dotnet'){
-//        bat 'dotnet -h'
-//       } 
+        container(name:'windows-dotnet'){
+          bat 'dotnet -h'
+      } 
      }
     }
   }
