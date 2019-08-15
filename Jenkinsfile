@@ -5,7 +5,7 @@ pipeline {
     skipDefaultCheckout true
   }
   stages {
-    stage('Test-node') {
+    stage('Test-linux') {
       agent {
         kubernetes {
           label 'nodejs-pod'
