@@ -8,8 +8,8 @@ pipeline {
     stage('Test-node') {
       agent {
         kubernetes {
-          label 'nodejs-app-pod'
-          yamlFile 'lin-node/nodejs-pod.yaml'
+          label 'nodejs-pod'
+          yamlFile 'linux/nodejs-pod.yaml'
         }
       }
       steps {
@@ -24,9 +24,10 @@ pipeline {
     stage('Test-windows') {
       agent {
         kubernetes {
+//        label from UI
 //        label 'windows-test'
-	  label 'windows-jenkinsfile'
-          yamlFile 'win/win-pod.yaml'
+	  label 'windows-pod'
+          yamlFile 'windows/dotnet-pod.yaml'
         }
       }
       steps {
