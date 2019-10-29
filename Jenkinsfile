@@ -17,7 +17,7 @@ pipeline {
         container('nodejs') {
           echo 'Hello World!'   
           sh 'node --version'
-          sleep 30
+//          sleep 30
         }
       }
     }
@@ -33,7 +33,7 @@ pipeline {
       steps {
 	sleep 45
         bat 'dir'
-	bat 'mvn'
+	bat 'mvn -h'
 //        container(name:'windows-dotnet'){
 //          bat 'dotnet -h'
 //      } 
