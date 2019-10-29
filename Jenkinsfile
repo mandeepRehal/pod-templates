@@ -33,6 +33,7 @@ pipeline {
       steps {
 	sleep 45
         bat 'dir'
+	bat 'mvn'
 //        container(name:'windows-dotnet'){
 //          bat 'dotnet -h'
 //      } 

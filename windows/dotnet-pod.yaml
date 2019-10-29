@@ -4,10 +4,11 @@ metadata:
 spec:
   containers:
   - name: jnlp
-    image: jenkins4eval/jnlp-agent:latest-windows
+#    image: jenkins4eval/jnlp-agent:latest-windows
+    image: jenkins4eval/maven-windows-jdk-8:latest
     tty: true
-  - name: windows-dotnet
-    image: mcr.microsoft.com/dotnet/core/sdk:2.1
-    tty: true
+#  - name: windows-dotnet
+#    image: mcr.microsoft.com/dotnet/core/sdk:2.1
+#    tty: true
   nodeSelector:
     agentpool: winage
