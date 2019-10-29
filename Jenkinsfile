@@ -24,8 +24,6 @@ pipeline {
     stage('Test-windows') {
       agent {
         kubernetes {
-//        label from UI
-//        label 'windows-test'
 	  label 'windows-pod'
           yamlFile 'windows/dotnet-pod.yaml'
         }
@@ -33,7 +31,6 @@ pipeline {
       steps {
 	sleep 45
         bat 'dir'
-	bat 'mvn -h'
 //        container(name:'windows-dotnet'){
 //          bat 'dotnet -h'
 //      } 
