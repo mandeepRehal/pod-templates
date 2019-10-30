@@ -29,9 +29,9 @@ pipeline {
       }
       steps {
         bat 'dir'
-//        container(name:'windows-dotnet'){
-//          bat 'dotnet -h'
-//      } 
+        container(name:'windows-dotnet'){
+          bat 'dotnet -h'
+      } 
      }
     }
   }
